@@ -3,17 +3,33 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E4154)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# Rich Text Editor for WinForms - How to Remove an Empty Paragraph when Appending a Content to a Document
+
+This example illustrates multiple methods to remove an empty paragraph when appending a content to a document in the RichEditControl (the same is applicable to the [Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer)).
+
+## Implementation Details
+
+The application form contains 4 buttons to use different approaches to complete the task.
+
+1. The first button removes the paragraph mark (e.g., `\par` in case of RTF format) from the source content being added to a document.
+
+2. The second buttons searches and removes paragraph marks.
+
+3. The third button calls the [SubDocument.AppendDocumentContent](https://docs.devexpress.com/OfficeFileAPI/devexpress.xtrarichedit.api.native.subdocument.appenddocumentcontent.overloads) method because it handles this scenario automatically.
+
+4. The last button uses the [SubDocument.Delete](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.SubDocument.Delete(DevExpress.XtraRichEdit.API.Native.DocumentRange)) method to remove empty paragraphs between tables.
+
+## Files to Review
 
 * [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
 * [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
-<!-- default file list end -->
-# How to remove an empty paragraph when appending a content to a document
 
+## More Examples
 
-<p>This example illustrates several methods to remove an empty paragraph when appending a content to a document in the RichEditControl (the same is applicable to the <a href="http://documentation.devexpress.com/#CoreLibraries/clsDevExpressXtraRichEditRichEditDocumentServertopic"><u>RichEditDocumentServer</u></a>). These methods include:</p><p>1) The most obvious solution is to remove the paragraph mark (e.g., <strong>'\par'</strong> in case of RTF format) from the source content being added to a document. </p><p>2) A more robust solution is to use built-in Search API (see the <a href="https://www.devexpress.com/Support/Center/p/E1677">Using the Search and Replace API functionality</a> and <a href="https://www.devexpress.com/Support/Center/p/E3147">Search API - An example of use</a> examples).</p><p>3) The most simple solution is to use the <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressXtraRichEditAPINativeSubDocument_AppendDocumentContenttopic"><u>SubDocument.AppendDocumentContent Method</u></a> because generally it will handle this scenario automatically.</p><p>4) The <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressXtraRichEditAPINativeSubDocument_Deletetopic"><u>SubDocument.Delete Method</u></a> is quite an effective solution when it is necessary to remove empty paragraphs between tables (e.g., see <a href="https://www.devexpress.com/Support/Center/p/Q356749">Blank Line when passing a table to docvariable</a>).</p><p>In a particular scenario you can choose a method that is most appropriate for your task.</p>
+* [WinForms Rich Text Editor API – How to Process Word Documents in Code](https://github.com/DevExpress-Examples/winforms-richedit-document-api)
 
-<br/>
+## Documentation
 
-
+* [How to: Remove Blank Lines from a Document
+](https://docs.devexpress.com/WindowsForms/10445/controls-and-libraries/rich-text-editor/examples/search-and-replace/how-to-remove-blank-lines-from-a-document)
